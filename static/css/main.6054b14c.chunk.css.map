@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/feedback/styles.module.css"],"names":[],"mappings":"AAAA,GACG,eACH,CACA,0BACG,oBAAa,CAAb,YACH,CAIA,iDACG,gBACH","file":"main.6054b14c.chunk.css","sourcesContent":["ul{\r\n   list-style: none;\r\n}\r\n.buttonList{\r\n   display: flex;\r\n}\r\n.notification{\r\n   margin-left: 30px;\r\n}\r\n.title{\r\n   margin-left: 30px;\r\n}"]}
