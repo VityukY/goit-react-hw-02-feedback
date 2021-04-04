@@ -1,0 +1,12 @@
+ul{
+   list-style: none;
+}
+.buttonList{
+   display: flex;
+}
+.notification{
+   margin-left: 30px;
+}
+.title{
+   margin-left: 30px;
+}
