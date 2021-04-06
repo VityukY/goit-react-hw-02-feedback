@@ -1,27 +1,17 @@
 import styles from './styles.module.css';
 
-const ControlsFeedback = ({
-   incrementGoodCounter,
-   incrementNeutralCounter,
-   incrementBadCounter,
-}) => {
+const ControlsFeedback = ({ options, incrementCounter }) => {
+   const values = Object.keys(options);
+
    return (
       <ul className={styles.buttonList}>
-         <li>
-            <button type="button" onClick={incrementGoodCounter}>
-               Good
-            </button>
-         </li>
-         <li>
-            <button type="button" onClick={incrementNeutralCounter}>
-               Neutral
-            </button>
-         </li>
-         <li>
-            <button type="button" onClick={incrementBadCounter}>
-               Bad
-            </button>
-         </li>
+         {values.map(value => (
+            <li key={[value]}>
+               <button type="button" onClick={() => incrementCounter([value])}>
+                  {[value]}
+               </button>
+            </li>
+         ))}
       </ul>
    );
 };

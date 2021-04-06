@@ -1,13 +1,16 @@
 import styles from './styles.module.css';
 
-const Statistics = ({ good, neutral, bad, total, percentage }) => {
+const Statistics = ({ children, optins }) => {
+   const values = Object.keys(optins);
+
    return (
       <ul className={styles.statList}>
-         <li> Good: {good}</li>
-         <li> Neutral: {neutral}</li>
-         <li> Bad: {bad}</li>
-         <li> Total: {total}</li>
-         <li>Positive feedback: {percentage === 'NaN' ? '0' : percentage}%</li>
+         {values.map(value => (
+            <li key={[value]}>
+               {[value]}:{optins[value]}
+            </li>
+         ))}
+         {children}
       </ul>
    );
 };
