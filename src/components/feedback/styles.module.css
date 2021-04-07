@@ -1,12 +1,12 @@
-ul{
+ul {
    list-style: none;
 }
-.buttonList{
+.buttonList {
    display: flex;
 }
-.notification{
+.notification {
    margin-left: 30px;
 }
-.title{
+.title {
    margin-left: 30px;
 }
