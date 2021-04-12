@@ -46,15 +46,8 @@ class App extends Component {
                {this.counterTotalFeedback() === 0 ? (
                   <Notification message="No feedback given" />
                ) : (
-                  <Statistics optins={this.state}>
-                     <p> Total: {this.counterTotalFeedback()}</p>
-                     <p>
-                        Positive feedback:{' '}
-                        {this.countPositiveFeedbackPercentage() === 'NaN'
-                           ? '0'
-                           : this.countPositiveFeedbackPercentage()}
-                        %
-                     </p>
+                  <Statistics optins={this.state} total={this.counterTotalFeedback} percentage = {this.countPositiveFeedbackPercentage ()} >
+
                   </Statistics>
                )}
             </Section>

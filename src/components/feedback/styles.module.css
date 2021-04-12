@@ -1,3 +1,4 @@
+
 ul {
    list-style: none;
 }
@@ -9,4 +10,7 @@ ul {
 }
 .title {
    margin-left: 30px;
+}
+.total, .percentage {
+   padding-left: 40px;
 }
