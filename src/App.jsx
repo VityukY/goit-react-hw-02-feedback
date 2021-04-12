@@ -33,23 +33,29 @@ class App extends Component {
    };
 
    render() {
+      const values = Object.keys(this.state);
+      const total = this.counterTotalFeedback();
+      const percentage = this.countPositiveFeedbackPercentage ()
+
       return (
          <div>
             <Section>
                <h1 className={styles.title}>Please leave feedback</h1>
                <ControlsFeedback
-                  options={this.state}
+                  options={values}
                   incrementCounter={this.incrementCounter}
                />
             </Section>
             <Section>
                <h2 className={styles.title}>Statistics</h2>
-               {this.counterTotalFeedback() === 0 ? (
+               {total === 0 ? (
                   <Notification message="No feedback given" />
                ) : (
-                  <Statistics optins={this.state} total={this.counterTotalFeedback} percentage={this.countPositiveFeedbackPercentage()} >
-
-                  </Statistics>
+                  <Statistics
+                     options={this.state}
+                     total={total}
+                     percentage={percentage}
+                  />
                )}
             </Section>
          </div>

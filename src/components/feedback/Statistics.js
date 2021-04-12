@@ -1,22 +1,21 @@
 import styles from './styles.module.css';
 
-const Statistics = ({ children, optins, total, percentage }) => {
-   const values = Object.keys(optins);
+const Statistics = ({ options, total, percentage }) => {
+   const values = Object.keys(options);
 
    return (
       <>
          <p className={styles.total}> Total: {total} </p>
          <p className={styles.percentage}>
             Positive feedback:
-            {{ percentage } === 'NaN' ? '0' : percentage}%
+            {percentage === 'NaN' ? '0' : percentage}%
          </p>
          <ul className={styles.statList}>
             {values.map(value => (
                <li key={[value]}>
-                  {[value]}:{optins[value]}
+                  {[value]}:{options[value]}
                </li>
             ))}
-            {children}
          </ul>
       </>
    );
