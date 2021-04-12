@@ -24,6 +24,7 @@ class App extends Component {
    counterTotalFeedback = () => {
       return this.state.good + this.state.neutral + this.state.bad;
    };
+
    countPositiveFeedbackPercentage = () => {
       const good = this.state.good;
       const total = this.counterTotalFeedback();
@@ -46,7 +47,7 @@ class App extends Component {
                {this.counterTotalFeedback() === 0 ? (
                   <Notification message="No feedback given" />
                ) : (
-                  <Statistics optins={this.state} total={this.counterTotalFeedback} percentage = {this.countPositiveFeedbackPercentage ()} >
+                  <Statistics optins={this.state} total={this.counterTotalFeedback} percentage={this.countPositiveFeedbackPercentage()} >
 
                   </Statistics>
                )}
