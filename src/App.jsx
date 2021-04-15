@@ -33,7 +33,7 @@ class App extends Component {
    };
 
    render() {
-      const values = Object.keys(this.state);
+      const feedbacks = Object.keys(this.state);
       const total = this.counterTotalFeedback();
       const percentage = this.countPositiveFeedbackPercentage ()
 
@@ -42,7 +42,7 @@ class App extends Component {
             <Section>
                <h1 className={styles.title}>Please leave feedback</h1>
                <ControlsFeedback
-                  options={values}
+                  options={feedbacks}
                   incrementCounter={this.incrementCounter}
                />
             </Section>
